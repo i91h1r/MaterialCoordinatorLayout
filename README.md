@@ -35,6 +35,5 @@
   		 }
 </pre>
 <br>或是因为不是使用的2.0.0 以上的gradle  在项目的build.gradle更改gradle为2.0.0 以上，然后再gradle-wrapper.properties 中设置<pre>distributionUrl=https\://services.gradle.org/distributions/gradle-x.xx-all.zip</pre> <br>
-
-####Development by
+###Development by
 <br>Developer / Author: hyr0318
