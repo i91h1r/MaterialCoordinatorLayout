@@ -21,6 +21,7 @@ public class MainActivity extends BaseActivity implements OnTabSelectListener {
 
     public static String[] mTitles = {
         "综合", "时间", "人气"
+
     };
     private ViewPager viewPager;
 
