@@ -29,9 +29,7 @@
 	* setStatusBarScrim 折叠之后设置状态栏为图片背景色
 	* setContentScrim 折叠之后设置保留位置的背景色(可在xml内设置 也可以代码设置)
 
-<br>4.  **给可滑动的组件**，NestedScrollView 或者Viewpager设置<pre>app:layout_behavior="@string/appbar_scrolling_view_behavior"</pre><br>
-<pre>
-    <android.support.v4.widget.NestedScrollView
+<br>4.  **给可滑动的组件**，NestedScrollView 或者Viewpager设置<pre>app:layout_behavior="@string/appbar_scrolling_view_behavior"</pre><br><pre><android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/><br>
@@ -39,8 +37,7 @@
         android:id="@+id/vp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-</pre>
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/></pre>
 **这里注意:** 
 <br>当可滑动组件是viewpager +Fragment 时候，在Fragmetn内一定要用RecycleView作为滑动组件 不可用listview 不然会造成和图片伸缩滑动造成冲突，导致listview 滑动图片伸缩现象出现
 <br>当你要设置的滑动组件只是recycleview时候可用NestedScrollView包裹
