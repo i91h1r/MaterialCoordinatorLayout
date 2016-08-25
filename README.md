@@ -29,7 +29,7 @@
 	* setStatusBarScrim 折叠之后设置状态栏为图片背景色
 	* setContentScrim 折叠之后设置保留位置的背景色(可在xml内设置 也可以代码设置)
 
-<br>4.  **给可滑动的组件**，NestedScrollView 或者Viewpager设置<pre>app:layout_behavior="@string/appbar_scrolling_view_behavior"</pre><br><pre><android.support.v4.widget.NestedScrollView
+<br>4.  **给可滑动的组件**，NestedScrollView 或者Viewpager设置<pre>app:layout_behavior="@string/appbar_scrolling_view_behavior"</pre><pre><android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/><br>
