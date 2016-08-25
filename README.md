@@ -24,11 +24,32 @@
 	* **pin** -  设置为这个模式时，当CollapsingToolbarLayout完全收缩后，Toolbar还可以保留在屏幕上。
 	* **parallax** - 设置为这个模式时，在内容滚动时，CollapsingToolbarLayout中的View（比如ImageView)也可以同时滚动，实现视差滚动效果，通常和layout_collapseParallaxMultiplier(设置视差因子)搭配使用。
 	* **layout_collapseParallaxMultiplier**(视差因子) - 设置视差滚动因子，值为：0~1。 值越大视差越大
-
 	#####在Toolbar控件中：layout_collapseMode(折叠模式)：为pin。 折叠之后 toolbar保留在头部
+	#####CollapsingToolbarLayout 中两个属性 setStatusBarScrim  setContentScrim
+	* setStatusBarScrim 折叠之后设置状态栏为图片背景色
+	* setContentScrim 折叠之后设置保留位置的背景色(可在xml内设置 也可以代码设置)
 
+<br>4.  **给可滑动的组件**，NestedScrollView 或者Viewpager设置app:layout_behavior="@string/appbar_scrolling_view_behavior"<pre>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/><br>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</pre>
+**这里注意:** 
+<br>当可滑动组件是viewpager +Fragment 时候，在Fragmetn内一定要用RecycleView作为滑动组件 不可用listview 不然会造成和图片伸缩滑动造成冲突，导致listview 滑动图片伸缩现象出现
+<br>当你要设置的滑动组件只是recycleview时候可用NestedScrollView包裹
 
-### 三 常见问题：
+### 三 总结：
+要有滑动伸缩效果 需要三点：<br>
+1.  CoordinatorLayout 作为父容器<br>
+2.  给需要滑动的组件设置<pre>app:layout_scrollFlags=”scroll|enterAlways” </pre>属性<br>
+3.  给可滑动属性设置<pre>app:layout_behavior="@string/appbar_scrolling_view_behavior"属性</pre>
+### 四 常见问题：
 * Caused by: java.lang.IllegalStateException: This app has been built with an incorrect configuration. Please configure your build for VectorDrawableCompat.
 <br>**解决**：
 <pre>android {
