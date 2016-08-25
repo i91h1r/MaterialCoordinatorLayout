@@ -6,7 +6,7 @@
     Material Design + Fragment +Viewpager 上滑 头部image 隐藏，Toolbar 固定在顶部位置 5.0 系统以上实现图片状态栏沉浸式
 
 #####截图：
-![image](https://github.com/hyr0318/MaterialCoordinatorLayout/image/2.gif)
+![image](https://github.com/hyr0318/MaterialCoordinatorLayout/blob/master/image/2.gif)
 
 
 
