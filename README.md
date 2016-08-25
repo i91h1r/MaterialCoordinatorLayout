@@ -5,6 +5,8 @@
 # 一 介绍：
     Material Design + Fragment +Viewpager 上滑 头部image 隐藏，Toolbar 固定在顶部位置 5.0 系统以上实现图片状态栏沉浸式
 
+#####截图：
+![image](https://github.com/hyr0318/MaterialCoordinatorLayout/image/2.gif)
 
 
 
@@ -24,7 +26,7 @@
 	* **layout_collapseParallaxMultiplier**(视差因子) - 设置视差滚动因子，值为：0~1。 值越大视差越大
 
 	#####在Toolbar控件中：layout_collapseMode(折叠模式)：为pin。 折叠之后 toolbar保留在头部
-![](http://static.open-open.com/lib/uploadImg/20150730/20150730221534_501.jpg)
+
 
 ### 三 常见问题：
 * Caused by: java.lang.IllegalStateException: This app has been built with an incorrect configuration. Please configure your build for VectorDrawableCompat.
